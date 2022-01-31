@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace TicTacToe2
@@ -17,6 +18,7 @@ namespace TicTacToe2
         public Game()
         {
             player = Player.player1;
+            List<int> vs = new List<int>();
         }
 
         public Player GetPlayer()
