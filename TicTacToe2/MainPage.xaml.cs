@@ -10,28 +10,17 @@ namespace TicTacToe2
 {
     public partial class MainPage : ContentPage
     {
-        int player = 1;
+        Game gameState;
         public MainPage()
         {
             InitializeComponent();
+            gameState = new Game();
         }
 
         void Button_Clicked(object sender, EventArgs e)
         {
-            if (((Button)sender).Text != "") return;
-
-            if (player == 1)
-            {
-                ((Button)sender).Text = "X";
-                player = 2;
-            }
-            else
-            {
-                ((Button)sender).Text = "O";
-                player = 1;
-            }
+            ((Button)sender).Text = gameState.PlayerMove((Button)sender);
         }
-
 
     }
 }
