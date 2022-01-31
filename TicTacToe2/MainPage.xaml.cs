@@ -15,7 +15,6 @@ namespace TicTacToe2
         {
             InitializeComponent();
             gameState = new Game();
-            List<int> vs = new List<int>();
         }
 
         void Button_Clicked(object sender, EventArgs e)
